@@ -25,7 +25,6 @@ class DataHandler:
         return self.df
 
     def get_splits(self, target_name):
-        # UPDATED: Changed 'Content' to 'Ticket Summary' to match your CSV
         X = self.df['Ticket Summary']
         y = self.df[target_name]
         return train_test_split(X, y, test_size=0.2, random_state=42)
